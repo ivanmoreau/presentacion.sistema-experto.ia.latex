@@ -1,2 +1,2 @@
 vimbuild:
-	tectonic doc.tex
+	tectonic -Z shell-escape doc.tex

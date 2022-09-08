@@ -149,6 +149,20 @@
 \end{itemize}
 \end{frame}
 
-
+\begin{frame}[fragile]
+\frametitle{Definición del sistema de recomendación}
+Nuestro sistema de recomendación se basa en la siguiente regla:
+%minted
+\begin{block}{Código Prolog}
+\begin{minted}{prolog}
+recomendacion(X, Y) :-
+  comida(X,A1,nutricion(F1,CH1,P1,C1),_,_,_),
+  comida(Y,A2,nutricion(F2,CH2,P2,C2),_,_,_),
+  A2 < A1,
+  similar(F1, F2, 5), similar(CH1, CH2, 5), 
+  similar(P1, P2, 5), similar(C1, C2, 15).
+\end{minted}
+\end{block}
+\end{frame}
 
 \end{document}
