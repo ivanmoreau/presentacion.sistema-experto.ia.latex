@@ -1,0 +1,6 @@
+[doc]
+name = presentacion
+bundle = doc.tex
+
+[[output]]
+shell_escape = true

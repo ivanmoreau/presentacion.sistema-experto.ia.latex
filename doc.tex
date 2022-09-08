@@ -15,7 +15,7 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{pdfpages}
-%\usepackage{minted}
+\usepackage{minted}
 \usepackage{multicol}
 
 \usepackage{tikz}
@@ -114,20 +114,41 @@
 
 
 \begin{frame}
-\frametitle{¿Qué es Simulated Annealing?}
+\frametitle{Descripción del sistema experto}
 
 \begin{itemize}[<+->]
-\item El Simulated Annealing es un método probabilístico propuesto por Kirkpatrick, 
-Gelett y Vecchi en 1983, para la búsqueda del mínimo global de una función de
-costo que puede poseer varios mínimos locales.
-
-\item Es una técnica que matemáticamente refleja el enfriado de un conjunto de átomos
-a su estado de mínima energía.
-
-\item Dibuja una analogía entre el enfriado de un material (búsqueda del mínimo estado
-de energía) y la búsqueda de un problema de optimización.
+\item El sistema experto es un programa que utiliza conocimiento especializado para resolver problemas.
+\item Dada la escasez de agua que han sufrido algunos países en los últimos años, se ha creado un sistema experto que permite a los usuarios saber que recomendaciones de alimentos requieren de menos agua.
+\item Nuestra propuesta es un sistema experto que recomienda alimentos que sean eficientes en el uso del agua.
 \end{itemize}
-
 \end{frame}
+
+\begin{frame}
+\frametitle{¿Cómo funciona nuestro sistema experto?}
+
+\begin{itemize}[<+->]
+\item El sistema experto se basa en el conocimiento de la investugación que se ha realizado sobre el tema.
+\item Se muestra una interfaz gráfica que permite al usuario elegir la categoría de alimentos que desea consultar.
+\item Al elegir una categoría, se muestra una lista de alimentos que pertenecen a esa categoría.
+\item Al elegir un alimento, se muestra la cantidad de agua que se necesita para producirlo, así como la
+  información nutricional del mismo.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{El sistema de recomendación}
+
+\begin{itemize}[<+->]
+  \item Al visualizar la información de un alimento, se muestra un botón que permite al usuario
+    visualizar una lista de alimentos que requieren de menos agua para producirse.
+  \item En esta lista podemos hacer clic en un alimento para ver su información en detalle.
+  \item Si el usuario desea regresar a la lista de alimentos de la categoría, puede hacer clic en el botón
+    "Regresar".
+  \item Este menú de navegación es generado dinámicamente para cada alimento que se visualiza.
+  \item Para lograr esto nos apoyamos en las funciones lógicas de Prolog.
+\end{itemize}
+\end{frame}
+
+
 
 \end{document}
