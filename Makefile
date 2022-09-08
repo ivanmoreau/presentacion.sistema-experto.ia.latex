@@ -1,0 +1,2 @@
+vimbuild:
+	tectonic doc.tex
