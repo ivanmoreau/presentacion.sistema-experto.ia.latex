@@ -165,4 +165,42 @@ recomendacion(X, Y) :-
 \end{block}
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Definición del sistema de recomendación II}
+Obtenemos todos los alimentos que cumplen con la regla usando la
+función findall:
+
+\begin{block}{Código Prolog}
+\begin{minted}{prolog}
+% save all Y recomendaciones for X in a list
+recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Definición del sistema de recomendación III}
+Para acceder a los elementos usamos botones que se generan dinámicamente a partir de la lista de recomendaciones:
+
+\begin{block}{Código Prolog}
+\begin{minted}{prolog}
+showRecButton(_, _, []).
+showRecButton(D, B2, [H|T]) :-
+  comida(H, _, _, _, _, Metodo),
+  new(Boton, button(H,
+    and(message(@prolog, Metodo),
+    and(message(B2, destroy), message(B2, free))))),
+  send(D, append, Boton, below),
+  showRecButton(D, B2, T).
+\end{minted}
+\end{block}
+\end{frame}
+
+% End of document
+\begin{frame}
+\frametitle{Final de la presentación}
+
+Muchas gracias por su atención.
+\end{frame}
+
 \end{document}
